@@ -1,0 +1,89 @@
+/* AppStore index.css */
+.App-store-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #fff1eb, #ace0f9);
+  min-height: 100vh;
+  padding: 30px 16px;
+}
+.app-heading {
+  font-weight: bold;
+  font-size: 52px;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0 12px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.input {
+  flex: 1;
+  min-width: 0; /* prevents flex item overflow */
+  border: none;
+  outline: none;
+  height: 50px;
+  background-color: transparent;
+  font-size: 18px; /* 30px was too large for an input */
+  padding-right: 36px;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap; /* let tabs wrap on small screens */
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.apps-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+  padding: 0;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 20px;
+}
+/* Tablet and below */
+
+@media (max-width: 768px) {
+  .app-heading {
+    font-size: 36px;
+  }
+  .tab-btn {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .app-heading {
+    font-size: 28px;
+  }
+  .search-bar {
+    max-width: 100%;
+  }
+  .tab-btn {
+    font-size: 16px;
+  }
+}

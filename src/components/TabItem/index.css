@@ -1,0 +1,30 @@
+/* TabItem index.css */
+
+.tab-item-container {
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tab-btn {
+  color: #7b8794;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-decoration: none; /* underline on every tab looks noisy — see below */
+  font-size: 22px;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.tab-btn:hover {
+  color: #2563eb;
+}
+
+.active-tab-btn {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb; /* replaces underline with a cleaner indicator */
+  font-weight: 600;
+}
